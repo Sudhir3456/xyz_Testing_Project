@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "78307e72-1a20-4121-9680-b27040c2cb0a",
+		"name": "Shoppers_Stack_RESTful_Web_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36383720"
+	},
+	"item": [
+		{
+			"name": "Register as a shopper",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has Bad Created\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"Darbaghnga\",\r\n  \"country\": \"india\",\r\n  \"email\": \"hhhvghg@gmail.com\",\r\n  \"firstName\": \"sojnjnu2345\",\r\n  \"gender\": \"MALE\",\r\n  \"lastName\": \"yadav4\",\r\n  \"password\": \"sonnjnu6789\",\r\n  \"phone\": 8867543345,\r\n  \"state\": \"Bihar\",\r\n  \"zoneId\": \"ALPHA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopper_Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has ok\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"hhhvghg@gmail.com\",\r\n  \"password\": \"sonnjnu6789\",\r\n  \"role\": \"SHOPPER\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/users/login",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Shopper data by shopperId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has Bad Request\", function () {\r",
+							"    pm.response.to.have.status(\"Bad Request\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/{shopperId}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"{shopperId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the shopper Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has Bad Request\", function () {\r",
+							"    pm.response.to.have.status(\"Bad Request\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{,,l,\r\n  \"city\": \"noida\",\r\n  \"country\": \"india\",\r\n  \"email\": \"yadav6841077889@gmail.com\",\r\n  \"firstName\": \"Apna111\",\r\n  \"gender\": \"MALE\",\r\n  \"lastName\": \"kumar\",\r\n  \"password\": \"Strong@123456\",\r\n  \"zoneId\": \"ALPHA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/{{shopperId}}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"{{shopperId}}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resets the password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has Forbidden\", function () {\r",
+							"    pm.response.to.have.status(\"Forbidden\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "isSecretBase64Encoded",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJza3kwMjEyQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzM2MDQ2OTAwLCJpYXQiOjE3MzYwMTA5MDB9.Sycuf3X9crGuF7o8qSANMxq9r7cpe1dGLxr8tk3bRIM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Ram12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping//users/reset-password",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"",
+						"users",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genarates URL for forgot password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"message Should be matches \", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Success\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "hhhvghg@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "role",
+						"value": "SHOPPER",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"sky0212@gmail.com\",\r\n  \"password\": \"Strong@1654\",\r\n  \"role\": \"SHOPPER\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping//users/forgot-password",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"",
+						"users",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns all the products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status code name has Forbidden\", function () {\r",
+							"    pm.response.to.have.status(\"Forbidden\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/products?gvhvh=ALPHA",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"products"
+					],
+					"query": [
+						{
+							"key": "gvhvh",
+							"value": "ALPHA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the shopper Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has Bad Request\", function () {\r",
+							"    pm.response.to.have.status(\"Bad Request\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"Agra\",\r\n  \"country\": \"india\",\r\n  \"email\": \"Rahul@gmail.com\",\r\n  \"firstName\": \"Rahul1111\",\r\n  \"gender\": \"MALE\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/shoppers/{{shopperId}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"shoppers",
+						"{{shopperId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns all the default products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has ok\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"message Should be matches \", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Success\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.shoppersstack.com/shopping/products/alpha?hbh=ALPHA",
+					"protocol": "https",
+					"host": [
+						"www",
+						"shoppersstack",
+						"com"
+					],
+					"path": [
+						"shopping",
+						"products",
+						"alpha"
+					],
+					"query": [
+						{
+							"key": "hbh",
+							"value": "ALPHA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
